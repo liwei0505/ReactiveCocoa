@@ -12,6 +12,7 @@
 		9B12D1AC1E5AC4FC004AD234 /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B12D1AB1E5AC4FC004AD234 /* NSObject+Caculator.m */; };
 		9B12D1AF1E5AC655004AD234 /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B12D1AE1E5AC655004AD234 /* CaculatorMaker.m */; };
 		9B697CF81E63C8AB0047E98E /* Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B697CF71E63C8AB0047E98E /* Caculator.m */; };
+		9B91C1E91E9C74D6002CC9FC /* RACController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B91C1E81E9C74D6002CC9FC /* RACController.m */; };
 		9BC6D3DC1E56A613006CEFF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3DB1E56A613006CEFF7 /* main.m */; };
 		9BC6D3DF1E56A613006CEFF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3DE1E56A613006CEFF7 /* AppDelegate.m */; };
 		9BC6D3E21E56A613006CEFF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3E11E56A613006CEFF7 /* ViewController.m */; };
@@ -20,7 +21,7 @@
 		9BC6D3EA1E56A613006CEFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC6D3E81E56A613006CEFF7 /* LaunchScreen.storyboard */; };
 		9BC6D3F41E56A68D006CEFF7 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3F31E56A68D006CEFF7 /* KVOController.m */; };
 		9BC6D3F71E56A6D9006CEFF7 /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3F61E56A6D9006CEFF7 /* StockData.m */; };
-		9BC6D3FB1E56C5E1006CEFF7 /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3FA1E56C5E1006CEFF7 /* RACViewController.m */; };
+		9BC6D3FB1E56C5E1006CEFF7 /* RACUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		9B12D1AE1E5AC655004AD234 /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		9B697CF61E63C8AB0047E98E /* Caculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caculator.h; sourceTree = "<group>"; };
 		9B697CF71E63C8AB0047E98E /* Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caculator.m; sourceTree = "<group>"; };
+		9B91C1E71E9C74D6002CC9FC /* RACController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACController.h; sourceTree = "<group>"; };
+		9B91C1E81E9C74D6002CC9FC /* RACController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACController.m; sourceTree = "<group>"; };
+		9B91C1EA1E9C7707002CC9FC /* RAClearn-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RAClearn-Prefix.pch"; sourceTree = "<group>"; };
 		9BC6D3D71E56A613006CEFF7 /* RAClearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAClearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC6D3DB1E56A613006CEFF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BC6D3DD1E56A613006CEFF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,8 +52,8 @@
 		9BC6D3F31E56A68D006CEFF7 /* KVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
 		9BC6D3F51E56A6D9006CEFF7 /* StockData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockData.h; sourceTree = "<group>"; };
 		9BC6D3F61E56A6D9006CEFF7 /* StockData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockData.m; sourceTree = "<group>"; };
-		9BC6D3F91E56C5E1006CEFF7 /* RACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
-		9BC6D3FA1E56C5E1006CEFF7 /* RACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
+		9BC6D3F91E56C5E1006CEFF7 /* RACUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACUIViewController.h; sourceTree = "<group>"; };
+		9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACUIViewController.m; sourceTree = "<group>"; };
 		B2AE5BC6E6146E14496185F4 /* libPods-RAClearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAClearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,31 @@
 			name = "add(函数式编程)";
 			sourceTree = "<group>";
 		};
+		9B91C1E21E9C698F002CC9FC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9BC6D3E01E56A613006CEFF7 /* ViewController.h */,
+				9BC6D3E11E56A613006CEFF7 /* ViewController.m */,
+				9B697CF51E63C8580047E98E /* add(函数式编程) */,
+				9B12D1A91E5AC487004AD234 /* calculate(链式编程) */,
+				9BC6D3F11E56A64B006CEFF7 /* kvo */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		9B91C1E31E9C69D7002CC9FC /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				9BC6D3F91E56C5E1006CEFF7 /* RACUIViewController.h */,
+				9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */,
+				9B11C3B21E56D1C6009B0ADB /* RACData.h */,
+				9B11C3B31E56D1C6009B0ADB /* RACData.m */,
+				9B91C1E71E9C74D6002CC9FC /* RACController.h */,
+				9B91C1E81E9C74D6002CC9FC /* RACController.m */,
+			);
+			name = RAC;
+			sourceTree = "<group>";
+		};
 		9BC6D3CE1E56A613006CEFF7 = {
 			isa = PBXGroup;
 			children = (
@@ -114,14 +143,10 @@
 		9BC6D3D91E56A613006CEFF7 /* RAClearn */ = {
 			isa = PBXGroup;
 			children = (
-				9B697CF51E63C8580047E98E /* add(函数式编程) */,
-				9B12D1A91E5AC487004AD234 /* calculate(链式编程) */,
-				9BC6D3F81E56C27A006CEFF7 /* RAC */,
-				9BC6D3F11E56A64B006CEFF7 /* kvo */,
+				9B91C1E21E9C698F002CC9FC /* Other */,
+				9B91C1E31E9C69D7002CC9FC /* RAC */,
 				9BC6D3DD1E56A613006CEFF7 /* AppDelegate.h */,
 				9BC6D3DE1E56A613006CEFF7 /* AppDelegate.m */,
-				9BC6D3E01E56A613006CEFF7 /* ViewController.h */,
-				9BC6D3E11E56A613006CEFF7 /* ViewController.m */,
 				9BC6D3E31E56A613006CEFF7 /* Main.storyboard */,
 				9BC6D3E61E56A613006CEFF7 /* Assets.xcassets */,
 				9BC6D3E81E56A613006CEFF7 /* LaunchScreen.storyboard */,
@@ -134,6 +159,7 @@
 		9BC6D3DA1E56A613006CEFF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B91C1EA1E9C7707002CC9FC /* RAClearn-Prefix.pch */,
 				9BC6D3DB1E56A613006CEFF7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -148,17 +174,6 @@
 				9BC6D3F61E56A6D9006CEFF7 /* StockData.m */,
 			);
 			name = kvo;
-			sourceTree = "<group>";
-		};
-		9BC6D3F81E56C27A006CEFF7 /* RAC */ = {
-			isa = PBXGroup;
-			children = (
-				9BC6D3F91E56C5E1006CEFF7 /* RACViewController.h */,
-				9BC6D3FA1E56C5E1006CEFF7 /* RACViewController.m */,
-				9B11C3B21E56D1C6009B0ADB /* RACData.h */,
-				9B11C3B31E56D1C6009B0ADB /* RACData.m */,
-			);
-			name = RAC;
 			sourceTree = "<group>";
 		};
 		CB84E19F3083D4317BCF74CE /* Pods */ = {
@@ -297,13 +312,14 @@
 				9B697CF81E63C8AB0047E98E /* Caculator.m in Sources */,
 				9B12D1AC1E5AC4FC004AD234 /* NSObject+Caculator.m in Sources */,
 				9BC6D3E21E56A613006CEFF7 /* ViewController.m in Sources */,
-				9BC6D3FB1E56C5E1006CEFF7 /* RACViewController.m in Sources */,
+				9BC6D3FB1E56C5E1006CEFF7 /* RACUIViewController.m in Sources */,
 				9BC6D3F71E56A6D9006CEFF7 /* StockData.m in Sources */,
 				9B12D1AF1E5AC655004AD234 /* CaculatorMaker.m in Sources */,
 				9B11C3B41E56D1C6009B0ADB /* RACData.m in Sources */,
 				9BC6D3DF1E56A613006CEFF7 /* AppDelegate.m in Sources */,
 				9BC6D3F41E56A68D006CEFF7 /* KVOController.m in Sources */,
 				9BC6D3DC1E56A613006CEFF7 /* main.m in Sources */,
+				9B91C1E91E9C74D6002CC9FC /* RACController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +439,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7NC535VVH6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RAClearn/RAClearn-Prefix.pch";
 				INFOPLIST_FILE = RAClearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjsfax.RAClearn;
@@ -437,6 +455,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7NC535VVH6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RAClearn/RAClearn-Prefix.pch";
 				INFOPLIST_FILE = RAClearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjsfax.RAClearn;

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface RACViewController : UIViewController
+@interface RACUIViewController : UIViewController
 
 @end
