@@ -1,0 +1,7 @@
+platform :ios, '8.0'
+
+target 'RAClearn' do
+
+pod ‘ReactiveCocoa’, ‘~> 2.5’
+
+end
