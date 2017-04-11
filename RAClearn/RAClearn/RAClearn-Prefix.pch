@@ -10,5 +10,6 @@
 #define RAClearn_Prefix_pch
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry.h>
 
 #endif /* RAClearn_Prefix_pch */
