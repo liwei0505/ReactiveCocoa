@@ -88,6 +88,33 @@
 			name = "calculate(链式编程)";
 			sourceTree = "<group>";
 		};
+		9B3311441E9CABC300F88A02 /* rac_replace_delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = rac_replace_delegate;
+			sourceTree = "<group>";
+		};
+		9B3311451E9CAC0300F88A02 /* rac_class_demo */ = {
+			isa = PBXGroup;
+			children = (
+				9B91C1E71E9C74D6002CC9FC /* RACController.h */,
+				9B91C1E81E9C74D6002CC9FC /* RACController.m */,
+			);
+			name = rac_class_demo;
+			sourceTree = "<group>";
+		};
+		9B3311461E9CAC2B00F88A02 /* rac_ui_demo */ = {
+			isa = PBXGroup;
+			children = (
+				9BC6D3F91E56C5E1006CEFF7 /* RACUIViewController.h */,
+				9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */,
+				9B11C3B21E56D1C6009B0ADB /* RACData.h */,
+				9B11C3B31E56D1C6009B0ADB /* RACData.m */,
+			);
+			name = rac_ui_demo;
+			sourceTree = "<group>";
+		};
 		9B697CF51E63C8580047E98E /* add(函数式编程) */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +139,9 @@
 		9B91C1E31E9C69D7002CC9FC /* RAC */ = {
 			isa = PBXGroup;
 			children = (
-				9BC6D3F91E56C5E1006CEFF7 /* RACUIViewController.h */,
-				9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */,
-				9B11C3B21E56D1C6009B0ADB /* RACData.h */,
-				9B11C3B31E56D1C6009B0ADB /* RACData.m */,
-				9B91C1E71E9C74D6002CC9FC /* RACController.h */,
-				9B91C1E81E9C74D6002CC9FC /* RACController.m */,
+				9B3311461E9CAC2B00F88A02 /* rac_ui_demo */,
+				9B3311451E9CAC0300F88A02 /* rac_class_demo */,
+				9B3311441E9CABC300F88A02 /* rac_replace_delegate */,
 			);
 			name = RAC;
 			sourceTree = "<group>";
