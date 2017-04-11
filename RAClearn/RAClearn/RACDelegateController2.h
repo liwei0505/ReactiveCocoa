@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RACDelegateController2 : UIViewController
-
+@property (nonatomic, strong) RACSubject *delegateSignal;
 @end
