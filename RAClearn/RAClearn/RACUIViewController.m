@@ -5,9 +5,12 @@
 //  Created by lee on 17/2/17.
 //  Copyright © 2017年 mjsfax. All rights reserved.
 /*
- ReactiveCocoa结合了几种编程风格：
- 函数式编程（Functional Programming）
- 响应式编程（Reactive Programming）
+ rac_signalForSelector：用于替代代理
+ rac_valuesAndChangesForKeyPath：用于监听某个对象的属性改变 kvo
+ rac_signalForControlEvents：用于监听某个事件
+ rac_addObserverForName:用于监听某个通知
+ rac_textSignal:只要文本框发出改变就会发出这个信号
+ 
  */
 
 #import "RACUIViewController.h"
@@ -15,11 +18,9 @@
 
 @interface RACUIViewController ()
 
-
 @property (strong, nonatomic) UILabel *lbName;
 @property (strong, nonatomic) RACData *data;
 @property (strong, nonatomic) UIButton *btnTest;
-
 
 @end
 
@@ -40,6 +41,9 @@
     
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
     tf.placeholder = @"测试键盘rac";
+    [tf.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"文本框变化了。。。。。");
+    }];
     [self.view addSubview:tf];
     
     UILabel *label = [[UILabel alloc] init];
@@ -88,8 +92,6 @@
 
 }
 
-
-
 #pragma mark - 统一的消息传递机制
     
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -130,6 +132,13 @@
     }];
     
 }
+
+#pragma mark - 处理当界面有多次请求时，需要都获取到数据时，才能展示界面
+- (void)rac_lifeSelector_forArray {
+
+    //rac_liftSelector:withSignalsFromArray:Signals:当传入的Signals(信号数组)，每一个signal都至少sendNext过一次，就会去触发第一个selector参数的方法
+}
+
 
 - (RACData *)data {
 
