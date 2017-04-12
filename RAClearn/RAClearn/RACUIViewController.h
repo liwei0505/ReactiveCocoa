@@ -10,6 +10,11 @@
  响应式编程（Reactive Programming）
 */
 
+/*常用宏
+ 
+ 
+ 
+ */
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>

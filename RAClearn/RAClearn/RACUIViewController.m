@@ -10,7 +10,7 @@
  rac_signalForControlEvents：用于监听某个事件
  rac_addObserverForName:用于监听某个通知
  rac_textSignal:只要文本框发出改变就会发出这个信号
- 
+ rac_liftSelector:withSignalsFromArray:Signals:处理当界面有多次请求时，需要都获取到数据时，才处理
  */
 
 #import "RACUIViewController.h"
@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UILabel *lbName;
 @property (strong, nonatomic) RACData *data;
 @property (strong, nonatomic) UIButton *btnTest;
+@property (strong, nonatomic) UITextField *tf;
 
 @end
 
@@ -46,6 +47,7 @@
     [tf.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"文本框变化了。。。。。");
     }];
+    self.tf = tf;
     [self.view addSubview:tf];
     
     UILabel *label = [[UILabel alloc] init];
@@ -68,6 +70,23 @@
     
 }
 
+#pragma mark - 常用宏
+- (void)rac_define {
+    //RAC(TARGET, [KEYPATH, [NIL_VALUE]]):用于给某个对象的某个属性绑定
+    // 只要文本框文字改变，就会修改label的文字
+    RAC(self.lbName, text) = self.tf.rac_textSignal;
+    
+    //RACObserve(self, name):监听某个对象的某个属性,返回的是信号:见kvo
+    
+    //@weakify(Obj)和@strongify(Obj),一般两个都是配套使用,在主头文件(ReactiveCocoa.h)中并没有导入，需要自己手动导入，RACEXTScope.h才可以使用。但是每次导入都非常麻烦，只需要在主头文件自己导入就好了
+    
+    //RACTuplePack：把数据包装成RACTuple（元组类）
+    RACTuple *tuple = RACTuplePack(@10,@20);
+    // 解包元组，会把元组的值，按顺序给参数里面的变量赋值
+    // name = @"xmg" age = @20
+    RACTupleUnpack(NSString *name, NSNumber *age) = tuple;
+    
+}
 
 #pragma mark - 用户自定义信号(创建了一个下载指定网站内容的信号)
 
@@ -167,8 +186,6 @@
 - (void)updateData1:(id)data1 data2:(id)data2 {
     NSLog(@"更新%@--%@",data1,data2);
 }
-
-#pragma mark -
 
 - (RACData *)data {
 
