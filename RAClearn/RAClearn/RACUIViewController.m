@@ -31,7 +31,7 @@
     [self ui];
     [self systemMessageSend];
 //    [self urlResult];
-
+    
 }
     
 - (void)ui {
@@ -41,6 +41,8 @@
     
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
     tf.placeholder = @"测试键盘rac";
+    
+    //监听文本框文字改变
     [tf.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"文本框变化了。。。。。");
     }];
@@ -95,7 +97,7 @@
 #pragma mark - 统一的消息传递机制
     
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+    [self rac_lifeSelector_forArray];
 }
 
 - (void)systemMessageSend {
@@ -105,12 +107,21 @@
     [RACObserve(self, data.name) subscribeNext:^(id x) {
         NSLog(@"%@",weakSelf.data.name);
     }];
+    [[self.data.name rac_valuesAndChangesForKeyPath:@"name" options:NSKeyValueObservingOptionNew observer:nil] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 
     // target-actinon
     self.btnTest.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         
-        NSLog(@"点击按钮");
+        NSLog(@"rac_command点击按钮");
         return [RACSignal empty];
+    }];
+    
+    // 事件监听
+    [[self.btnTest rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+       
+        NSLog(@"rac_control_event按钮被点击");
     }];
     
     //notification
@@ -137,8 +148,27 @@
 - (void)rac_lifeSelector_forArray {
 
     //rac_liftSelector:withSignalsFromArray:Signals:当传入的Signals(信号数组)，每一个signal都至少sendNext过一次，就会去触发第一个selector参数的方法
+    //使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据
+    RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"发送请求1"];
+        return nil;
+    }];
+    
+    RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"发送请求2"];
+        return nil;
+    }];
+    
+    // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据
+    [self rac_liftSelector:@selector(updateData1:data2:) withSignalsFromArray:@[request1,request2]];
+     
 }
 
+- (void)updateData1:(id)data1 data2:(id)data2 {
+    NSLog(@"更新%@--%@",data1,data2);
+}
+
+#pragma mark -
 
 - (RACData *)data {
 
