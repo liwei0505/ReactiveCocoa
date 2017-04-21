@@ -24,6 +24,7 @@
 		9BC6D3F41E56A68D006CEFF7 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3F31E56A68D006CEFF7 /* KVOController.m */; };
 		9BC6D3F71E56A6D9006CEFF7 /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3F61E56A6D9006CEFF7 /* StockData.m */; };
 		9BC6D3FB1E56C5E1006CEFF7 /* RACUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */; };
+		9BEDA12D1EA9A6820084D381 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEDA12C1EA9A6820084D381 /* LoginController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		9BC6D3F61E56A6D9006CEFF7 /* StockData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockData.m; sourceTree = "<group>"; };
 		9BC6D3F91E56C5E1006CEFF7 /* RACUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACUIViewController.h; sourceTree = "<group>"; };
 		9BC6D3FA1E56C5E1006CEFF7 /* RACUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACUIViewController.m; sourceTree = "<group>"; };
+		9BEDA12B1EA9A6820084D381 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		9BEDA12C1EA9A6820084D381 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		B2AE5BC6E6146E14496185F4 /* libPods-RAClearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAClearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +180,7 @@
 		9BC6D3D91E56A613006CEFF7 /* RAClearn */ = {
 			isa = PBXGroup;
 			children = (
+				9BEDA12A1EA9A6610084D381 /* UItest */,
 				9B91C1E21E9C698F002CC9FC /* Other */,
 				9B91C1E31E9C69D7002CC9FC /* RAC */,
 				9BC6D3DD1E56A613006CEFF7 /* AppDelegate.h */,
@@ -208,6 +212,15 @@
 				9BC6D3F61E56A6D9006CEFF7 /* StockData.m */,
 			);
 			name = kvo;
+			sourceTree = "<group>";
+		};
+		9BEDA12A1EA9A6610084D381 /* UItest */ = {
+			isa = PBXGroup;
+			children = (
+				9BEDA12B1EA9A6820084D381 /* LoginController.h */,
+				9BEDA12C1EA9A6820084D381 /* LoginController.m */,
+			);
+			name = UItest;
 			sourceTree = "<group>";
 		};
 		CB84E19F3083D4317BCF74CE /* Pods */ = {
@@ -350,6 +363,7 @@
 				9BC6D3FB1E56C5E1006CEFF7 /* RACUIViewController.m in Sources */,
 				9BC6D3F71E56A6D9006CEFF7 /* StockData.m in Sources */,
 				9B12D1AF1E5AC655004AD234 /* CaculatorMaker.m in Sources */,
+				9BEDA12D1EA9A6820084D381 /* LoginController.m in Sources */,
 				9B11C3B41E56D1C6009B0ADB /* RACData.m in Sources */,
 				9BC6D3DF1E56A613006CEFF7 /* AppDelegate.m in Sources */,
 				9BC6D3F41E56A68D006CEFF7 /* KVOController.m in Sources */,
