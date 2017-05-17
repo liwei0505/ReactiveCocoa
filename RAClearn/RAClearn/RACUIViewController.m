@@ -36,13 +36,17 @@
 }
     
 - (void)ui {
+    //rac手势
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] init];
+    [pan.rac_gestureSignal subscribeNext:^(id x) {
+        
+    }];
+    [self.view addGestureRecognizer:pan];
     
-    UIPanGestureRecognizer *rec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
-    [self.view addGestureRecognizer:rec];
     
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
     tf.placeholder = @"测试键盘rac";
-    
+
     //监听文本框文字改变
     [tf.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"文本框变化了。。。。。");
