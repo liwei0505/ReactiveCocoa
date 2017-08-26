@@ -1,0 +1,77 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Bugly (2.4.8)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GTSDK (1.6.4.0)
+  - MJRefresh (3.1.12)
+  - OCMock (3.3.1)
+  - pop (1.0.9)
+  - PureLayout (3.0.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SensorsAnalyticsSDK (1.7.8):
+    - SensorsAnalyticsSDK/core (= 1.7.8)
+  - SensorsAnalyticsSDK/core (1.7.8)
+  - SSZipArchive (1.8.1)
+  - SVProgressHUD (2.1.2)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - Bugly
+  - FMDB (~> 2.6.2)
+  - GTSDK (~> 1.6.2-noidfa)
+  - MJRefresh
+  - OCMock (~> 3.3.1)
+  - pop
+  - PureLayout
+  - ReactiveCocoa (~> 2.5)
+  - SDWebImage (~> 4.0.0)
+  - SensorsAnalyticsSDK
+  - SSZipArchive
+  - SVProgressHUD
+  - YYText
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bugly: da3c02408c14838d498429320545a8e439392978
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GTSDK: cb4840f7aadd2d3c45e7c5d0bd854646681f7253
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SensorsAnalyticsSDK: a1aeb4568dc203f98919400f618c58a0dc558f3a
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 18404bdfa199420b7bc4477dfa232e779b45cc48
+
+COCOAPODS: 1.2.0.beta.1

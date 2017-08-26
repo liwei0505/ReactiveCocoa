@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "b8c19a8a-a470-11e5-a7ae-dd1c767af24b++542",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "b8c19a8a-a470-11e5-a7ae-dd1c767af24b++542" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "b8c19a8a-a470-11e5-a7ae-dd1c767af24b++542" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "08694E23-65CF-4D0A-B146-B1AEB057479C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "b8c19a8a-a470-11e5-a7ae-dd1c767af24b++542" : "mobile\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sword",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/Sword\/trunk\/Sword\/Sword.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/10.0.110.11:8089",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "b8c19a8a-a470-11e5-a7ae-dd1c767af24b++542"
+    }
+  ]
+}
