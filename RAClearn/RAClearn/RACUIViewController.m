@@ -43,16 +43,8 @@
     }];
     [self.view addGestureRecognizer:pan];
     
-    
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
-    tf.placeholder = @"测试键盘rac";
-
     //监听文本框文字改变
-    [tf.rac_textSignal subscribeNext:^(id x) {
-        NSLog(@"文本框变化了。。。。。");
-    }];
-    self.tf = tf;
-    [self.view addSubview:tf];
+    [self textFieldDemo];
     
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(0, 0, 50, 20);
@@ -72,6 +64,49 @@
 
 - (void)tap {
     
+}
+
+- (void)textFieldDemo {
+    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 50, 200, 50)];
+    tf.placeholder = @"测试键盘rac";
+    self.tf = tf;
+    [self.view addSubview:tf];
+    
+//    [tf.rac_textSignal subscribeNext:^(id x) {
+//        NSLog(@"文本框变化了。。。。。");
+//    }];z
+    
+    /*filter操作控制事件流
+     * rac_textSignal ==> filter ==> subscribeNext
+     * 起始事件 =》数据通过filter可以按照一定规则过滤 =》符合规则数据在block中打印
+     * filter输出也是RACSignal
+     */
+    [[tf.rac_textSignal filter:^BOOL(id value) {
+        NSString *text = value;
+        return text.length > 3;
+    }] subscribeNext:^(id x) {
+        NSLog(@"filter---%@",x);
+    }];
+    //    RACSignal *tfSignal = [tf.rac_textSignal filter:^BOOL(id value) {
+    //        NSString *text = value;
+    //        return text.length > 3;
+    //    }];
+    //    [tfSignal subscribeNext:^(id x) {
+    //        NSLog(@"%@",x);
+    //    }];
+    
+    /*map操作
+     * rac_textSignal ==> map ==> filter ==> subscribeNext
+     * map后收到的都是NSNumber实例：可用map操作把接收的数据转换成想要的类型，只要他是对象
+     * textlength基本类型作为事件的内容，需要封装： @()
+     */
+    [[[tf.rac_textSignal map:^id(NSString *text) {
+        return @(text.length);
+    }] filter:^BOOL(NSNumber *length) {
+        return [length integerValue] > 3;
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 }
 
 #pragma mark - 常用宏

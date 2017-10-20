@@ -22,10 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self prepare];
     [self loginTextField];
 }
 
 - (void)prepare {
+    [[self.username.rac_textSignal map:^id(id value) {
+        return value;
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 }
 //监听文本框内容拼接信息
 - (void)after {
@@ -44,20 +50,20 @@
 
 - (void)loginTextField {
 
-    RACSignal *userNameSignal = [self.username.rac_textSignal map:^id(id value) {
-        return @([self isValid]);
+    RACSignal *userNameSignal = [self.username.rac_textSignal map:^id(NSString *text) {
+        return @(text.length);
     }];
     
-    RACSignal *passwordSignal = [self.password.rac_textSignal map:^id(id value) {
-        return @([self isValid]);
+    RACSignal *passwordSignal = [self.password.rac_textSignal map:^id(NSString *text) {
+        return @(text.length);
     }];
     
     // 通过信道返回的值，设置文本框的文字色
-    RAC(self.username, textColor) = [userNameSignal map:^id(id value) {
-        return [value boolValue] ? [UIColor greenColor] : [UIColor redColor];
+    RAC(self.username, backgroundColor) = [userNameSignal map:^id(id value) {
+        return [value boolValue] ? [UIColor clearColor] : [UIColor redColor];
     }];
-    RAC(self.password, textColor) = [passwordSignal map:^id(id value) {
-        return [value boolValue] ? [UIColor greenColor] : [UIColor redColor];
+    RAC(self.password, backgroundColor) = [passwordSignal map:^id(id value) {
+        return [value boolValue] ? [UIColor clearColor] : [UIColor redColor];
     }];
     
     // 创建登录按扭的信号，把用户名与密码合成一个信道
