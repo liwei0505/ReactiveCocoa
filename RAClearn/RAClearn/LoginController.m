@@ -33,6 +33,7 @@
         NSLog(@"%@",x);
     }];
 }
+
 //监听文本框内容拼接信息
 - (void)after {
     // 返回结果后拼接
@@ -42,10 +43,6 @@
     [self.password.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"password");
     }];
-}
-
-- (void)before {
-    // 返回结果前拼接    
 }
 
 - (void)loginTextField {
@@ -72,7 +69,6 @@
     }];
     
     [loginSignal subscribeNext:^(NSNumber *x) {
-        
         if ([x boolValue]) {
             [self.loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         } else {
@@ -81,10 +77,6 @@
     }];
     
     
-}
-
-- (BOOL)isValid {
-    return YES;
 }
 
 @end
