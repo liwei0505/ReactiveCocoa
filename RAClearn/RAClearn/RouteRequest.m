@@ -65,6 +65,7 @@
     return param;
 }
 
+//重新包装block
 - (void)setTargetCallBack:(void (^)(NSError *, id))targetCallBack {
     __weak RouteRequest *weakRequest = self;
     if (!targetCallBack) {
