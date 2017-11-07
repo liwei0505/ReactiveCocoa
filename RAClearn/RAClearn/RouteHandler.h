@@ -24,5 +24,5 @@
 - (BOOL)preferModalPresentationWithRequest:(RouteRequest *)request;
 //方法内根据request、获取的目标和源视图控制器，完成转场逻辑，可继承重写专场
 - (BOOL)transitionWithRequest:(RouteRequest *)request sourceViewController:(UIViewController *)source targetViewController:(UIViewController *)target isPreferModal:(BOOL)isPreferModal error:(NSError *)error;
-
+- (BOOL)transitionWithRequest:(RouteRequest *)request error:(NSError *__autoreleasing *)error;
 @end
