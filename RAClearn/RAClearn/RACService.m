@@ -35,4 +35,10 @@
     [_protocol protocol];
 }
 
+- (void)login:(void (^)(BOOL))completion {
+    BOOL result = YES;
+    completion(result);
+}
+
+
 @end
