@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loginTextField];
+//    [self loginTextField];
 }
 
 - (void)prepare {
@@ -166,6 +166,17 @@
 
 - (BOOL)isValid {
     return YES;
+}
+
+- (RACSignal *)signalForLoadingImage:(NSString *)url {
+    RACScheduler *scheduler = [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground];//后台RACScheduler
+    
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSData *date = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        [subscriber sendNext:date];
+        [subscriber sendCompleted];
+        return nil;
+    }] subscribeOn:scheduler];
 }
 
 @end
