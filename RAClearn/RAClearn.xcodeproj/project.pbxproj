@@ -41,6 +41,9 @@
 		9BE6BE021FA81DE2005DBAF5 /* pb_foxtail_large_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE6BDFC1FA81DE2005DBAF5 /* pb_foxtail_large_1.png */; };
 		9BE6BE031FA81DE2005DBAF5 /* ms_occupation_category.html in Resources */ = {isa = PBXBuildFile; fileRef = 9BE6BDFD1FA81DE2005DBAF5 /* ms_occupation_category.html */; };
 		9BEDA12D1EA9A6820084D381 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEDA12C1EA9A6820084D381 /* LoginController.m */; };
+		C9FD1A4320863AB100226DD8 /* DataBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD1A4220863AB100226DD8 /* DataBindViewController.m */; };
+		C9FD1A4620863AD900226DD8 /* HotelTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD1A4520863AD900226DD8 /* HotelTitleCell.m */; };
+		C9FD1A4920863B0900226DD8 /* HotelTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD1A4820863B0900226DD8 /* HotelTitleViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,12 @@
 		9BEDA12B1EA9A6820084D381 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		9BEDA12C1EA9A6820084D381 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		B2AE5BC6E6146E14496185F4 /* libPods-RAClearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAClearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FD1A4120863AB100226DD8 /* DataBindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBindViewController.h; sourceTree = "<group>"; };
+		C9FD1A4220863AB100226DD8 /* DataBindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBindViewController.m; sourceTree = "<group>"; };
+		C9FD1A4420863AD900226DD8 /* HotelTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotelTitleCell.h; sourceTree = "<group>"; };
+		C9FD1A4520863AD900226DD8 /* HotelTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotelTitleCell.m; sourceTree = "<group>"; };
+		C9FD1A4720863B0900226DD8 /* HotelTitleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotelTitleViewModel.h; sourceTree = "<group>"; };
+		C9FD1A4820863B0900226DD8 /* HotelTitleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotelTitleViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +261,7 @@
 		9BC6D3D91E56A613006CEFF7 /* RAClearn */ = {
 			isa = PBXGroup;
 			children = (
+				C9FD1A4020863A8000226DD8 /* MTDemo */,
 				9BE6BDF41FA81DBD005DBAF5 /* h5 */,
 				9B59584B1F9DBAB80079C7C7 /* Router */,
 				9BCDA0A81F98810B00D8C5D8 /* rac_struct */,
@@ -347,6 +357,19 @@
 				9BEDA12C1EA9A6820084D381 /* LoginController.m */,
 			);
 			name = UItest;
+			sourceTree = "<group>";
+		};
+		C9FD1A4020863A8000226DD8 /* MTDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD1A4120863AB100226DD8 /* DataBindViewController.h */,
+				C9FD1A4220863AB100226DD8 /* DataBindViewController.m */,
+				C9FD1A4420863AD900226DD8 /* HotelTitleCell.h */,
+				C9FD1A4520863AD900226DD8 /* HotelTitleCell.m */,
+				C9FD1A4720863B0900226DD8 /* HotelTitleViewModel.h */,
+				C9FD1A4820863B0900226DD8 /* HotelTitleViewModel.m */,
+			);
+			name = MTDemo;
 			sourceTree = "<group>";
 		};
 		CB84E19F3083D4317BCF74CE /* Pods */ = {
@@ -489,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B595F0B1FA020480079C7C7 /* RouteMatchResult.m in Sources */,
+				C9FD1A4320863AB100226DD8 /* DataBindViewController.m in Sources */,
 				9BCDA0AE1F98817C00D8C5D8 /* RACProtocol.m in Sources */,
 				9B59584E1F9DBDD70079C7C7 /* RouteRequest.m in Sources */,
 				9B697CF81E63C8AB0047E98E /* Caculator.m in Sources */,
@@ -504,6 +528,8 @@
 				9B5958571F9DE66B0079C7C7 /* RouteMatcher.m in Sources */,
 				9B59585A1F9F24C60079C7C7 /* RouteBaseController.m in Sources */,
 				9B12D1AF1E5AC655004AD234 /* CaculatorMaker.m in Sources */,
+				C9FD1A4620863AD900226DD8 /* HotelTitleCell.m in Sources */,
+				C9FD1A4920863B0900226DD8 /* HotelTitleViewModel.m in Sources */,
 				9BCDA0AB1F98816A00D8C5D8 /* RACService.m in Sources */,
 				9BEDA12D1EA9A6820084D381 /* LoginController.m in Sources */,
 				9B11C3B41E56D1C6009B0ADB /* RACData.m in Sources */,
