@@ -289,11 +289,8 @@
 		9BC6D3D91E56A613006CEFF7 /* RAClearn */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				C9FD1A4020863A8000226DD8 /* MTDemo */,
-=======
 				9B3F2D781FB991DD0051942A /* temp */,
->>>>>>> f98e32eedea727cce4cb627353f273a6865f95fe
 				9BE6BDF41FA81DBD005DBAF5 /* h5 */,
 				9B59584B1F9DBAB80079C7C7 /* Router */,
 				9B91C1E21E9C698F002CC9FC /* Other */,
