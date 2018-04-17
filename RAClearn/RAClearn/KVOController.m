@@ -39,11 +39,9 @@
     self.button = button;
     [self.view addSubview:self.button];
     
-    
 }
 
 - (void)click {
-    
     [self.stockData setValue:@"20" forKey:@"price"];
 }
 
@@ -52,13 +50,11 @@
 //3. 移除观察
 
 - (void)kvoTest {
-
     self.stockData = [[StockData alloc] init];
     [self.stockData setValue:@"searph" forKey:@"stockName"];
     [self.stockData setValue:@"10.0" forKey:@"price"];
     //添加观察
     [self.stockData addObserver:self forKeyPath:@"price" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
-    
 }
 
 //回调方法
@@ -73,9 +69,7 @@
 
 //移除观察者
 - (void)dealloc {
-
     [_stockData removeObserver:self forKeyPath:@"price"];
-
 }
 
 @end

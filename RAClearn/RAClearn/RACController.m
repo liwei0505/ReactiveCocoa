@@ -26,7 +26,9 @@
     
 //    [self racreplaysubject_demo];
 //    [self raccommand_demo];
-    [self racmulticastconnection_demo];
+//    [self racmulticastconnection_demo];
+    [self disposableDemo];
+    
 }
 
 #pragma mark - RACSignal简单使用
@@ -339,5 +341,23 @@
     [connect connect];
 }
 
+#pragma mark 内存管理
+/*
+ * RC自己持有全局的所有信号。一个signal有订阅者，这个signal是活跃的，订阅者被移除了，信号被销毁
+ * 取消订阅signal：1 completed或者error事件之后，订阅会自动移除 2 RACDisposable 手动移除订阅
+ * RACSignal的订阅方法都会返回一个RACDisposable实例，通过dispose方法手动移除订阅
+ */
+- (void)disposableDemo {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@(1)];
+        return nil;
+    }];
+    
+    RACDisposable *subscription = [signal subscribeNext:^(id x) {
+        NSLog(@"subscrip : %@",x);
+    }];
+    
+    [subscription dispose];
+}
 
 @end

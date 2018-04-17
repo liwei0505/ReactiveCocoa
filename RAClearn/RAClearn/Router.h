@@ -16,6 +16,7 @@
 #import <Foundation/Foundation.h>
 #import "RouteRequest.h"
 #import "RouteHandler.h"
+#import "RouteMatcher.h"
 
 @interface Router : NSObject
 

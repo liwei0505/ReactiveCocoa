@@ -53,4 +53,10 @@
     }
     return YES;
 }
+
+- (BOOL)transitionWithRequest:(RouteRequest *)request error:(NSError *__autoreleasing *)error {
+    *error = [NSError errorWithDomain:@"lee.router" code:0 userInfo:nil];
+    return NO;
+}
+
 @end

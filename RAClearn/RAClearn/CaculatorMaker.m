@@ -14,14 +14,12 @@
 - (CaculatorMaker *(^)(int))add {
 
     return ^CaculatorMaker *(int value) {
-    
         _result += value;
         return self;
     };
 }
 
 - (CaculatorMaker *(^)(int))sub {
-
     return ^CaculatorMaker *(int value) {
         _result -= value;
         return self;
@@ -29,7 +27,6 @@
 }
 
 - (CaculatorMaker *(^)(int))muilt {
-
     return ^CaculatorMaker *(int value) {
         _result *= value;
         return self;
@@ -37,7 +34,6 @@
 }
 
 - (CaculatorMaker *(^)(int))divide {
-
     return ^CaculatorMaker *(int value) {
         _result /= value;
         return self;

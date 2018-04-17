@@ -18,8 +18,6 @@
 @property (strong, nonatomic) NSDictionary *queryParam;//url上？以后的键值对参数
 @property (strong, nonatomic) NSDictionary *routeParam;//url上匹配的路径参数
 @property (strong, nonatomic) NSDictionary *primitiveParam;//原生参数，比方说要传给目标UIImage对象，NSArray对象等等
-@property (copy, nonatomic) void(^targetCallBack)(NSError *error, id response);
-@property (assign, nonatomic) BOOL isConsumed;//是否消费掉，一个request只能处理一次，该字段反应request是否被处理过
 @end
 
 @implementation RouteRequest
@@ -65,6 +63,7 @@
     return param;
 }
 
+//重新包装block
 - (void)setTargetCallBack:(void (^)(NSError *, id))targetCallBack {
     __weak RouteRequest *weakRequest = self;
     if (!targetCallBack) {

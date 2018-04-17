@@ -10,4 +10,5 @@
 
 @interface RACService : NSObject
 - (void)qurey;
+- (void)login:(void(^)(BOOL status))completion;
 @end

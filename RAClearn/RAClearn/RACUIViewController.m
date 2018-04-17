@@ -74,7 +74,7 @@
     
 //    [tf.rac_textSignal subscribeNext:^(id x) {
 //        NSLog(@"文本框变化了。。。。。");
-//    }];z
+//    }];
     
     /*filter操作控制事件流
      * rac_textSignal ==> filter ==> subscribeNext
