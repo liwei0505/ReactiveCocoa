@@ -30,9 +30,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self ui];
-    [self systemMessageSend];
+//    [self systemMessageSend];
 //    [self urlResult];
-    
+    [self textFieldDemo];
+    [self rac_define];
 }
     
 - (void)ui {

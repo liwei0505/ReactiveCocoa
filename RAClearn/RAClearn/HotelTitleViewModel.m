@@ -10,4 +10,9 @@
 
 @implementation HotelTitleViewModel
 
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    NSLog(@"%@",title);
+}
+
 @end

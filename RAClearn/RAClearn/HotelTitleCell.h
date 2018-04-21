@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HotelTitleViewModel.h"
+#import "NameInputViewModel.h"
+#import "PhoneInputViewModel.h"
 
 @interface HotelTitleCell : UIView
 - (void)bindViewModel:(HotelTitleViewModel *)viewModel;

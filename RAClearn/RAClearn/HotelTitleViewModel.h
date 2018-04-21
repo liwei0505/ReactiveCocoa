@@ -11,4 +11,5 @@
 @interface HotelTitleViewModel : NSObject
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *inputText;
+@property (strong, nonatomic) RACSignal *titleSignal;
 @end

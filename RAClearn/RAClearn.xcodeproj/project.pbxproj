@@ -34,6 +34,8 @@
 		9BCDA0AB1F98816A00D8C5D8 /* RACService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA0AA1F98816A00D8C5D8 /* RACService.m */; };
 		9BCDA0AE1F98817C00D8C5D8 /* RACProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA0AD1F98817C00D8C5D8 /* RACProtocol.m */; };
 		9BCDA0B21F989CF700D8C5D8 /* RACHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDA0B11F989CF700D8C5D8 /* RACHandler.m */; };
+		9BD841FC20899CA900B0A951 /* NameInputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD841FB20899CA900B0A951 /* NameInputViewModel.m */; };
+		9BD841FF20899CC500B0A951 /* PhoneInputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD841FE20899CC500B0A951 /* PhoneInputViewModel.m */; };
 		9BE6BDFE1FA81DE2005DBAF5 /* work_category.css in Resources */ = {isa = PBXBuildFile; fileRef = 9BE6BDF61FA81DE2005DBAF5 /* work_category.css */; };
 		9BE6BDFF1FA81DE2005DBAF5 /* work_category.js in Resources */ = {isa = PBXBuildFile; fileRef = 9BE6BDF81FA81DE2005DBAF5 /* work_category.js */; };
 		9BE6BE001FA81DE2005DBAF5 /* ic_no_data_hint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BE6BDFA1FA81DE2005DBAF5 /* ic_no_data_hint.jpg */; };
@@ -114,6 +116,10 @@
 		9BCDA0AF1F98872800D8C5D8 /* IRACProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRACProtocol.h; sourceTree = "<group>"; };
 		9BCDA0B01F989CF700D8C5D8 /* RACHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACHandler.h; sourceTree = "<group>"; };
 		9BCDA0B11F989CF700D8C5D8 /* RACHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACHandler.m; sourceTree = "<group>"; };
+		9BD841FA20899CA900B0A951 /* NameInputViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NameInputViewModel.h; sourceTree = "<group>"; };
+		9BD841FB20899CA900B0A951 /* NameInputViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NameInputViewModel.m; sourceTree = "<group>"; };
+		9BD841FD20899CC500B0A951 /* PhoneInputViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneInputViewModel.h; sourceTree = "<group>"; };
+		9BD841FE20899CC500B0A951 /* PhoneInputViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneInputViewModel.m; sourceTree = "<group>"; };
 		9BE6BDF61FA81DE2005DBAF5 /* work_category.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = work_category.css; sourceTree = "<group>"; };
 		9BE6BDF81FA81DE2005DBAF5 /* work_category.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = work_category.js; sourceTree = "<group>"; };
 		9BE6BDFA1FA81DE2005DBAF5 /* ic_no_data_hint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_no_data_hint.jpg; sourceTree = "<group>"; };
@@ -397,6 +403,10 @@
 				C9FD1A4520863AD900226DD8 /* HotelTitleCell.m */,
 				C9FD1A4720863B0900226DD8 /* HotelTitleViewModel.h */,
 				C9FD1A4820863B0900226DD8 /* HotelTitleViewModel.m */,
+				9BD841FA20899CA900B0A951 /* NameInputViewModel.h */,
+				9BD841FB20899CA900B0A951 /* NameInputViewModel.m */,
+				9BD841FD20899CC500B0A951 /* PhoneInputViewModel.h */,
+				9BD841FE20899CC500B0A951 /* PhoneInputViewModel.m */,
 			);
 			name = MTDemo;
 			sourceTree = "<group>";
@@ -582,6 +592,8 @@
 				9B595F081FA01F6E0079C7C7 /* RouteRegularExpression.m in Sources */,
 				9BC6D3FB1E56C5E1006CEFF7 /* RACUIViewController.m in Sources */,
 				9BC6D3F71E56A6D9006CEFF7 /* StockData.m in Sources */,
+				9BD841FC20899CA900B0A951 /* NameInputViewModel.m in Sources */,
+				9BD841FF20899CC500B0A951 /* PhoneInputViewModel.m in Sources */,
 				9B5958511F9DC8AE0079C7C7 /* Router.m in Sources */,
 				9B5958541F9DE3510079C7C7 /* RouteHandler.m in Sources */,
 				9B5958571F9DE66B0079C7C7 /* RouteMatcher.m in Sources */,

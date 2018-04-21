@@ -7,31 +7,25 @@
 //
 
 #import "DataBindViewController.h"
+#import "HotelTitleCell.h"
+#import "HotelTitleViewModel.h"
 
 @interface DataBindViewController ()
-
+@property (strong, nonatomic) HotelTitleCell *cell;
+@property (strong, nonatomic) HotelTitleViewModel *viewModel;
 @end
 
 @implementation DataBindViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.cell = [[HotelTitleCell alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.cell];
+    self.viewModel = [[HotelTitleViewModel alloc] init];
+    [self.cell bindViewModel:self.viewModel];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
