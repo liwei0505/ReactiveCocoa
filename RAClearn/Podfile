@@ -2,7 +2,8 @@ platform :ios, '8.0'
 
 target 'RAClearn' do
 
-pod ‘ReactiveCocoa’, ‘~> 2.5’
+#pod ‘ReactiveCocoa’, ‘~> 2.5’
+pod 'ReactiveObjC', '~> 3.0.0'
 pod 'Masonry'
 #pod 'Masonry', '~> 1.0.2'
 

@@ -60,6 +60,9 @@
     [self.btnTest setTitle:@"按钮" forState:UIControlStateNormal];
     self.btnTest.center = CGPointMake(self.lbName.center.x, self.lbName.center.y+50);
     [self.view addSubview:self.btnTest];
+    [[self.btnTest rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+    }];
     
 }
 

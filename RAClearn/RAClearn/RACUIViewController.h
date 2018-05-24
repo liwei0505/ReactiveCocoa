@@ -17,7 +17,6 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface RACUIViewController : UIViewController
 

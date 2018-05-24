@@ -19,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//        NSLog(@"创建了信号");
+//        [subscriber sendNext:@"this is rac"];//发送信号
+//        NSLog(@"发送了信号");
+//        return nil;
+//    }];
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//        NSLog(@"订阅了信号");
+//    }];
+    
+    [self raccommand_demo];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -237,7 +249,8 @@
         //return [RACSignal empty]; //不传信号可返回空信号，但必须返回信号
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
-            [subscriber sendNext:@"请求数据"];
+//            [subscriber sendNext:@"请求数据"];
+            [subscriber sendError:[NSError errorWithDomain:@"test.mjs" code:0 userInfo:nil]];
             // 注意：数据传递完，最好调用sendCompleted，这时命令才执行完毕
             [subscriber sendCompleted];
             return nil;
@@ -248,20 +261,32 @@
     _command = command;
     
     // 3.订阅RACCommand中的信号
-    [command.executionSignals subscribeNext:^(id x) {
-       [x subscribeNext:^(id x) {
-           NSLog(@"%@",x);
-       }];
-    }];
+//    [command.executionSignals subscribeNext:^(id x) {
+//        NSLog(@"aaaaaa");
+//        [x subscribeNext:^(id  _Nullable x) {
+//            NSLog(@"%@",x);
+//        } error:^(NSError * _Nullable error) {
+//            NSLog(@"%@",x);
+//        }];
+//    }];
     
     // RAC高级用法
     // switchToLatest:用于signal of signals，获取signal of signals发出的最新信号,也就是可以直接拿到RACCommand中的信号
-    [command.executionSignals.switchToLatest subscribeNext:^(id x) {
+    [self.command.executionSignals.switchToLatest subscribeNext:^(id x) {
         NSLog(@"%@",x);
+        [x subscribeNext:^(id  _Nullable x) {
+            NSLog(@"%@",x);
+        } error:^(NSError * _Nullable error) {
+            NSLog(@"%@",x);
+        }];
+    }];
+    
+    [self.command.errors subscribeNext:^(NSError * _Nullable x) {
+        NSLog(@"error");
     }];
     
     // 4.监听命令是否执行完毕,默认会来一次，可以直接跳过，skip表示跳过第一次信号
-    [[command.executing skip:1] subscribeNext:^(id x) {
+    [[_command.executing skip:1] subscribeNext:^(id x) {
        
         if ([x boolValue] == YES) {
             NSLog(@"正在执行");

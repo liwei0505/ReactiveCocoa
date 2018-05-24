@@ -9,7 +9,8 @@
 #ifndef RAClearn_Prefix_pch
 #define RAClearn_Prefix_pch
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+//#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC.h>
 #import <Masonry.h>
 
 #endif /* RAClearn_Prefix_pch */

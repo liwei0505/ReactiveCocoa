@@ -100,14 +100,14 @@
 //        NSLog(@"login result %@",x); //返回RACDynamicSignal
 //    }];
     
-    [[[[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(id x) {
+    [[[[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
         //block无返回值，添加附加逻辑，不改变事件本身
         self.loginBtn.enabled = NO;
         
-    }] flattenMap:^RACStream *(id value) {
+    }] flattenMap:^__kindof RACSignal * _Nullable(__kindof UIControl * _Nullable value) {
         return [self loginSignal];
-    }] subscribeNext:^(id x) {
+    }] subscribeNext:^(id  _Nullable x) {
         @strongify(self);
         self.loginBtn.enabled = YES;
         NSLog(@"login result %@",x); //返回登录结果做登录处理
